@@ -9,19 +9,22 @@ class Day18Hard{
 
         int j = key, k=0;
 
-        // while(i<j) {
             for(int i=k; i<j; i++) {
-                System.out.print(a[i]+" ");
-                if(a[i] > pre) {
-                    pre = a[i];
-                }
-                // if(i==j-1){
-                //     k; 
-                //     j=
-                // }
+                if(j<=a.length){
+                    System.out.print(a[i]+" ");
+                    if(a[i] > pre) {
+                        pre = a[i];
+                    }
+                    if(i == j-1 && j<=a.length){
+                        k++;
+                        i=k-1;
+                        j++;
+                        System.out.println();
+                        System.out.println(pre);
+                        pre = Integer.MIN_VALUE;
+                    }
             }
-        // }
-
+            }
         input.close();
     }
 }
