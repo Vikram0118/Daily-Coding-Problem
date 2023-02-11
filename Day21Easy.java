@@ -1,4 +1,4 @@
-// hard
+// hard -- snapchat -- number of rooms sum
 
 class Day21Easy{
     public static void main(String[] args) {

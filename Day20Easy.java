@@ -1,4 +1,4 @@
-// google
+// google --- intersecting element in two linked list  -- very easy
 
 class Node {
     int data;
