@@ -1,3 +1,5 @@
+// google
+
 class Node {
     int data;
     Node next;
@@ -35,6 +37,20 @@ class Linked {
             root = root.next;
         }
     }
+
+    public int intersectNode(Node root1, Node root2) {
+
+        while(root1!=null && root2!=null){
+            if(root1.data == root2.data) {
+                return root1.data;
+            } else {
+                root1 = root1.next;
+                root2 = root2.next;
+            }
+        }
+
+        return -999;
+    }
 }
 
 public class Day20Easy {
@@ -47,6 +63,7 @@ public class Day20Easy {
         root1 = linked.insertNode(7, root1);
         root1 = linked.insertNode(8, root1);
         root1 = linked.insertNode(10, root1);
+
         root2 = linked.insertNode(99, root2);
         root2 = linked.insertNode(1, root2);
         root2 = linked.insertNode(8, root2);
@@ -58,6 +75,6 @@ public class Day20Easy {
         System.out.println("LIST 2 : ");
         linked.printList(root2);
         System.out.println();
-        System.out.println("INTERSECTING POINT : ");
+        System.out.println( ((linked.intersectNode(root1, root2)) == -999) ? "THERE IS NO INTERSECTING NODE" : "THE INTERSECTING NODE IS "+(linked.intersectNode(root1, root2)) );
     }
 }
