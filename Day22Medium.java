@@ -23,13 +23,13 @@ public class Day22Medium {
         dictionary.put(2, "brown");
         dictionary.put(3, "the");
         dictionary.put(4, "fox");
-        String sentence = "thequickbrownfox";
+        // String sentence = "thequickbrownfox";
+
+        for(int i=0; i< dictionary.size(); i++){
+            
+        }
 
         System.out.println(dictionary);
-
-
-
-
 
     }
 }
