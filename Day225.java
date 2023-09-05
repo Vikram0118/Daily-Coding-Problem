@@ -1,8 +1,8 @@
 
 class Day225 {
     public static void main(String[] args) {
-        // int[] arr = {1, 2, 3, 4, 5, 6};
-        int[] arr = {2, 4, 1, 5, 3};
+        int[] arr = {1, 2, 3, 4, 5, 6}; // 5
+        // int[] arr = {2, 4, 1, 5, 3};   // 3
 
         int k = 2;
         int n = arr.length - 1;
@@ -15,10 +15,7 @@ class Day225 {
         int ref = k;
         while(executed < n) {
             while(ref > 0) {  // to move to the k not executed position 
-                i++;
-                if(i>n) {
-                    i = 0;
-                }
+                i = (i+1) % (n+1);
                 if(circleOrder[i] != -1) {
                     ref --;
                 } 
