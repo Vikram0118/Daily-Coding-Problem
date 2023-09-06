@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 class Day225 {
     public static void main(String[] args) {
@@ -7,6 +9,24 @@ class Day225 {
         int k = 2;
         int n = arr.length - 1;
         System.out.println("The prisioner have to stand in position no. "+MySolution(arr, k, n)+" to be executed last");
+        
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int j = 0;
+        int i= 0;
+        for(i=0; i<nums.length; i++) {
+            int ref = target - nums[i];
+            if(map.containsKey(ref)) {
+                j = map.get(ref);
+                break;
+            } else {
+                map.put(nums[i], i);
+            }
+        }
+
+        return new int[] {i, j};
     }
 
     public static int MySolution(int[] circleOrder, int k , int n) {
